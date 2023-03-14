@@ -1,0 +1,26 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="0" id="male"><label for="male">Male</label>
+    <input type="radio" name="gender" value="1" id="female"><label for="female">Female</label><br>
+
+    <label for="description">Accident description:</label>
+    <input type="text" name="description" id="description"><br>
+
+    <label for="annual_wage">Annual wage:</label>
+    <input type="number" name="annual_wage" id="annual_wage"><br>
+
+    <label for="medical_expenses">Medical expenses:</label>
+    <input type="number" name="medical_expenses" id="medical_expenses"><br>
+
+    <label for="accident_date">Accident date:</label>
+    <input type="date" name="accident_date" id="accident_date"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+    
+

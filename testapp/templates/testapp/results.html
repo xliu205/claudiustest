@@ -1,0 +1,31 @@
+
+
+{% block content %}
+<h1>Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Accident Description</th>
+      <th>Annual Wage</th>
+      <th>Medical Expenses</th>
+      <th>Accident Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for accident in accidents %}
+    <tr>
+      <td>{{ accident.name }}</td>
+      <td>{% if accident.gender == False %}Male{% else %}Female{% endif %}</td>
+      <td>{{ accident.description }}</td>
+      <td>{{ accident.annual_wage }}</td>
+      <td>{{ accident.medical_expenses }}</td>
+      <td>{{ accident.accident_date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
