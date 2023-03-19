@@ -1,26 +1,117 @@
-<form method="post">
-    {% csrf_token %}
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name"><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claudius Test Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
 
-    <label for="gender">Gender:</label>
-    <input type="radio" name="gender" value="0" id="male"><label for="male">Male</label>
-    <input type="radio" name="gender" value="1" id="female"><label for="female">Female</label><br>
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-    <label for="description">Accident description:</label>
-    <input type="text" name="description" id="description"><br>
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    <label for="annual_wage">Annual wage:</label>
-    <input type="number" name="annual_wage" id="annual_wage"><br>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-    <label for="medical_expenses">Medical expenses:</label>
-    <input type="number" name="medical_expenses" id="medical_expenses"><br>
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
 
-    <label for="accident_date">Accident date:</label>
-    <input type="date" name="accident_date" id="accident_date"><br>
+        .gender-label {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-    <input type="submit" value="Submit">
-</form>
+        .gender-input {
+            display: inline-block;
+            margin-right: 20px;
+
+        }
+
+        input[type="submit"] {
+            display: block;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <h1>Accident Report Form</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="gender">Gender:</label>
+        <div>
+            <label for="male" style="display: inline-block;">
+                <input type="radio" name="gender" value="0" id="male">
+                Male
+            </label>
+            <label for="female" style="display: inline-block; margin-bottom: 20px; margin-left: 10px;">
+                <input type="radio" name="gender" value="1" id="female">
+                Female
+            </label>
+        </div>
+
+        <label for="description" style="margin-bottom: 10px;">Accident description:</label>
+        <input type="text" name="description" id="description">
+
+        <label for="annual_wage">Annual wage:</label>
+        <input type="number" name="annual_wage" id="annual_wage">
+
+        <label for="medical_expenses">Medical expenses:</label>
+        <input type="number" name="medical_expenses" id="medical_expenses">
+
+        <label for="accident_date">Accident date:</label>
+        <input type="date" name="accident_date" id="accident_date">
+
+        <input type="submit" value="Submit">
+
+
+
+    </form>
+</div>
+</body>
+</html>
 
     
 

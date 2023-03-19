@@ -4,7 +4,7 @@ from .models import Accident
 
 
 # Create your views here.
-
+# index page
 def index(request):
     if request.method == 'POST':
         form = LawsuitForm(request.POST)
@@ -14,7 +14,7 @@ def index(request):
     else:
         form = LawsuitForm()
     return render(request, 'testapp/index.html', {'form': form})
-
+# results page
 def results(request):
     accidents = Accident.objects.all()
     return render(request, 'testapp/results.html', {'accidents': accidents})
