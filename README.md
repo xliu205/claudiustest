@@ -29,6 +29,9 @@ To run this project locally, you need to have Python 3.11 and Django installed.
 - **Usage**:
 To use the website, simply navigate to https://claudiustest.herokuapp.com/ on your web browser. You can input data for accidents by clicking on the "Add Accident" button and filling out the form.
 
+- **Contributions**: 
+ - Xingyu Liu (xliu205, total 8hrs productive + 3hrs frustration(mainly AWS deploymemnt)
+
 
 Contact
 If you have any questions or feedback, you can contact the project owner at [xingyu_liu@brown.edu].
